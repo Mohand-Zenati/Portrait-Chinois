@@ -1,0 +1,336 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right top,  #ffbf99, #f29c71, #e4774d, #d54f2d, #c41111);
+}
+
+.soustitre-color {
+    color: 	#FF4500;
+    
+}
+
+
+
+.bg {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.a-propos-invisible {
+    display: none;
+}
+
+.a-propos {
+    z-index: 21;
+    color: black;
+    padding: 1rem;
+    background-color: white;
+    position: absolute;
+    bottom: 8em;
+    right: 4em;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.a-propos-fermer {
+    position: absolute;
+    right: 1.5vw;
+    top: 0.5vh;
+    font-size: 2.2rem;
+}
+
+.a-propos-fermer:hover {
+    cursor: pointer;
+}
+
+.btn-a-propos {
+    position: absolute;
+    right: 1em;
+    bottom: 10%;
+    height: 3em;
+    transition: 0.5s;
+    animation: float 6s ease-in-out infinite;
+}
+
+.btn-a-propos:hover {
+    cursor: pointer;
+    opacity: 70%;
+    transition: 0.5s;
+}
+
+
+
+
+#portrait-chinois-bg {
+    z-index: -20;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portrait-chinois-contenu {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portrait-chinois-image {
+    height: 400px;
+    width: auto;
+    border-radius: 75%;
+}
+
+.portrait-chinois-description p {
+    color: white;
+    width: 70%;
+    text-align: justify;
+}
+
+.portrait-chinois-description h1 {
+    font-family: 'Exo', sans-serif;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.portrait-chinois-description h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn_gauche {
+    margin-left: 50px;
+    height: 20px;
+    width: 20px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    transform: rotate(-42deg);
+    cursor: pointer;
+}
+
+.button_droite_position {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.btn_droite {
+    margin-right: 50px;
+    height: 20px;
+    width: 20px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    transform: rotate(138deg);
+    cursor: pointer;
+}
+
+.btn_gauche:hover,
+.btn_droite:hover {
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+}
+
+.portrait-description {
+    border-top: 2px solid white;
+    padding-top: 10px;
+}
+
+.balle {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: 20;
+}
+
+
+.portrait-chinois-illustration {
+    border-radius: 100%;
+    background-color: transparent;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.portrait-chinois-formulaire {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    background: linear-gradient(.33turn, #FFB831, #FA7BE7, #B17BFA);
+    background-size: 600% 100%;
+    animation: gradient 3s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+}
+
+.lettre {
+    animation: an 1s ease-out 1 both;
+    display: inline-block;
+}
+
+@keyframes an {
+    from {
+        opacity: 0;
+        transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(500px) translate3d(0, 0, 0);
+    }
+}
+
+.image-apparition {
+    animation: image-opacite 5s;
+}
+
+@keyframes image-opacite {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+form {
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    min-width: 500px;
+}
+
+input, textarea {
+    width: auto;
+    min-height: 2rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 500px;
+    border-radius: 3px;
+    padding-left: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#envoie {
+    margin-left: 2.5em;
+    color: white;
+    background-color: transparent;
+    border: solid px black;
+    font-weight:800;
+}
+
+.formulaire-titre {
+    text-align: center;
+    font-size: 2rem;
+}
+
+label {
+    min-width: 500px;
+    margin-left: 30px;
+}
+
+.volet {
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 1em;
+    background: white;
+}
+
+.volet-visible {
+    height: 300px;
+    font-family: 'Exo', sans-serif;
+    background: white;
+
+}
+
+
+.ml {
+    font-family: 'Exo', sans-serif;
+    
+
+}
+
+.volet-invisible {
+    background-color: #white;
+    height: 3em;
+    
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    
+}
+
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 6rem;
+}
